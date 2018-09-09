@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Clínica Veterinária</title>
+    @*@Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")*@
+
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+
+   
+</head>
+<body>
+    <header>
+        <a href="/Home/Index">
+            <img src="~/Content/imagens/logo1.png" alt="Alternate Text" />
+        </a>
+        <ul class="nav">
+            <li>@Html.ActionLink("Início", "Index", "Home")</li>
+            <li id="dropres">
+                Responsável
+                <div id="nav-res">
+                    <p>@Html.ActionLink("Cadastro", "cadastro", "Responsavel")</p>
+                    <p>@Html.ActionLink("Consulta", "consulta", "Responsavel")</p>
+                    <p>@Html.ActionLink("Pesquisa", "pesquisa", "Responsavel")</p>
+                </div>
+            </li>
+            <li id="droppet">
+                Pet
+                <div id="nav-pet">
+                    <p>@Html.ActionLink("Cadastro", "cadastro", "Animal")</p>
+                    <p>@Html.ActionLink("Consulta", "consulta", "Animal")</p>
+                    <p>@Html.ActionLink("Pesquisa", "pesquisa", "Animal")</p>
+                </div>
+            </li>
+            <li id="dropdown">
+                Area Restrita
+                <div id="drop">
+                    <div id="naves">
+                        <h5>Raca</h5>
+                        <p>@Html.ActionLink("Cadastro", "cadastro", "Raca")</p>
+                        <p>@Html.ActionLink("Consulta", "consulta", "Raca")</p>
+                        <p>@Html.ActionLink("Pesquisa", "pesquisa", "Raca")</p>
+                    </div>
+
+                    <div id="navdi">
+                        <h5>Tipo do Animal</h5>
+                        <p>@Html.ActionLink("Cadastro", "cadastro", "TipoAnimal")</p>
+                        <p>@Html.ActionLink("Consulta", "consulta", "TipoAnimal")</p>
+                        <p>@Html.ActionLink("Pesquisa", "pesquisa", "TipoAnimal")</p>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </header>
+
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Clínica Veterinária</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

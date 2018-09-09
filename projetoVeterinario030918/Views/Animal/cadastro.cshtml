@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewBag.Title = "cadastro";
+}
+
+<section class="titlepages">
+    <h2>Cadastro do Pet</h2>
+</section>
+
+<form action="confirma" method="post">
+    <label>Código:</label>
+
+    <input type="number" name="txtCod" id="txtCod" required/>
+
+
+    <label>Nome:</label>
+
+    <input type="text" name="txtNome" id="txtNome" required/>
+
+
+    <label>Código do Tipo:</label>
+
+    <input type="number" name="txtCodTP" id="txtCodTP" required/>
+
+
+    <label>Código da Raça:</label>
+
+    <input type="number" name="txtCodRA" id="txtCodRA" required/>
+
+
+    <label>Código do Responsável:</label>
+
+    <input type="number" name="txtCodR" id="txtCodR" required/>
+
+    <label>Data de Cadastro:</label>
+
+    <input type="date" name="txtData" id="txtData" />
+
+
+    <input type="submit" name="btnCadastro" id="btnCadastro" value="CADASTRAR" />
+</form>
